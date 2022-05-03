@@ -5,10 +5,10 @@ import requests
 import time
 import pandas as pd
 
-# NASA Exoplanet URL
+# Enlace a NASA Exoplanet
 START_URL = "https://exoplanets.nasa.gov/exoplanet-catalog/"
 
-# Webdriver
+# Controlador web
 browser = webdriver.Chrome("D:/Setup/chromedriver_win32/chromedriver.exe")
 browser.get(START_URL)
 
@@ -45,7 +45,7 @@ planet_df_1 = pd.read_csv("updated_scraped_data.csv")
 for index, row in planet_df_1.iterrows():
     print(row['hyperlink'])
     scrape_more_data(row['hyperlink'])
-    print(f"Data Scraping at hyperlink {index+1} completed")
+    print(f"Datos extraídos del hipervínculo {index+1} completado")
 
 
 
